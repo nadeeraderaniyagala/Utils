@@ -1,6 +1,9 @@
-# ExcelSheetUtils.class 
-   
-   public static Sheet getTestData(String sheetName) {
+# ExcelSheetUtils.class
+
+    private static Workbook book;
+    private static TestDataInput testDataInput;
+
+    public static Sheet getTestData(String sheetName) {
         InputStream file;
         try {
             file = new FileInputStream(ConfigFileReader.properties.getProperty("testdata.excel.sheet.path"));
